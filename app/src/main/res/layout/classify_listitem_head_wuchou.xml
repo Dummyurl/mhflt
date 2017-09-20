@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_btn_pressed"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorBackground" />
+
+    <TextView
+        android:id="@+id/tv_classify_wuchou_platform_name"
+        style="@style/text_12sp_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:text="维C理财" />
+
+
+    <View
+        android:id="@+id/line_know"
+        style="@style/bg_line" />
+
+</LinearLayout>

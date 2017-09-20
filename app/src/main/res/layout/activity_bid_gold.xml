@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorStatusRed"
+             android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed">
+
+        <ImageView
+            android:id="@+id/iv_back_my_account"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_left_white"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="活期金"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height"
+        android:background="@android:color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_below="@+id/frame_layout"
+                android:background="@color/colorBackground"/>
+
+            <com.flyco.tablayout.SegmentTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_below="@+id/line2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp"
+                app:tl_bar_color="@android:color/white"
+                app:tl_bar_stroke_color="#cccccc"
+                app:tl_bar_stroke_width="0.8dp"
+                app:tl_divider_color="#cccccc"
+                app:tl_divider_width="0.8dp"
+                app:tl_indicator_color="@color/colorTextRed"
+                app:tl_indicator_corner_radius="0dp"
+                app:tl_tab_space_equal="true"
+                app:tl_tab_width="70dp"
+                app:tl_textUnselectColor="@color/colorTextSecondary"
+                app:tl_textsize="12sp"/>
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_layout"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingStart="6dp"
+                        android:textColor="@color/colorTextThird"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/colorTextThird"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textColor="@color/colorTextThird"
+                        android:textSize="10sp"
+                        />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_below="@+id/frame"
+                android:background="@color/colorBackground"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginTop="13dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_platform_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/tv_platform_name"
+                    style="@style/text_12sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iv_platform_logo"
+                    android:layout_alignStart="@+id/iv_platform_logo"
+                    android:layout_below="@+id/iv_platform_logo"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="维C理财"/>
+
+                <TextView
+                    android:id="@+id/tv_ckxq"
+                    android:layout_width="60dp"
+                    android:layout_height="19dp"
+                    android:layout_below="@+id/tv_platform_name"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/shape_tag_blue"
+                    android:gravity="center"
+                    android:text="查看详情"
+                    android:textColor="@color/chart_blue"
+                    android:textSize="12sp"/>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="2px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_ckxq"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_toEndOf="@+id/iv_platform_logo"
+                    android:background="@color/colorLine"/>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/text_12sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/line"
+                    android:layout_alignTop="@+id/line"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/line"
+                    android:gravity="fill_vertical"
+                    android:lineSpacingExtra="10dp"
+                    android:text="年化收益    1.6%－9%\n投资周期    30天－5年\n注册资本    588万"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_below="@+id/layout_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_round_rectangle_red_soild"
+                android:gravity="center"
+                android:text="前往购买"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_buy_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/shape_left_radio_red"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:text="前往购买"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+    <include
+        android:id="@+id/include_loading"
+        layout="@layout/fragment_lazy_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height"/>
+
+    <include
+        android:id="@+id/include_load_error"
+        layout="@layout/view_load_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height"/>
+</FrameLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:textSize="18sp"
+        android:textColor="@color/progress_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="16dp"
+        android:text="----"/>
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_below="@+id/tv_1"
+        style="@style/text_12sp_gray2"
+        android:layout_alignLeft="@+id/tv_1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="年涨跌幅"/>
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/tv_1"
+        style="@style/text_14sp_gray"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-------"/>
+
+    <TextView
+        android:id="@+id/tv_4"
+        style="@style/text_12sp_gray2"
+        android:layout_alignLeft="@+id/tv_3"
+        android:layout_below="@+id/tv_3"
+        android:layout_alignBottom="@id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="--------"/>
+
+    <View
+        style="@style/bg_line_vertical"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/tv_2"
+        android:layout_marginLeft="50dp"/>
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        style="@style/bg_line"/>
+</RelativeLayout>

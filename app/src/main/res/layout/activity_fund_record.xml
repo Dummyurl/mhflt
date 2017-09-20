@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorStatusRed"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/activity_fund_record_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/activity_fund_record_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_left_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="基金档案"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_fund_record_title_layout"
+        android:background="@android:color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f3f3f3">
+
+            <com.changju.fanlitou.ui.ObservableScrollView
+                android:id="@+id/activity_fund_record_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_in_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            style="@style/text_14sp_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:gravity="center_vertical"
+                            android:text="基金概况" />
+
+                        <View style="@style/bg_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="基金名称" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_name"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="成立日期" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_register_date"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="最新规模" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_latest_scale"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="基金公司" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_company"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="托管银行" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_trusteeship_bank"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="交易状态" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_trade_state"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:id="@+id/layout_fund_record_fund_overview_subscribe_confirm"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="申购确认" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_subscribe_confirm"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:id="@+id/layout_fund_record_fund_overview_redemption_confirm"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="赎回确认" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_fund_overview_redemption_confirm"
+                                style="@style/text_12sp_gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--饼状图-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_14sp_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="资产分布" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_asset_distribution_date"
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ebebeb" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp">
+
+                            <LinearLayout
+                                android:id="@+id/activity_fund_record_piechart_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="155dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="6dp">
+
+                                    <com.github.mikephil.charting.charts.PieChart
+                                        android:id="@+id/activity_fund_record_piechart"
+                                        android:layout_width="118dp"
+                                        android:layout_height="118dp"
+                                        android:layout_centerVertical="true" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/activity_fund_record_asset_total_value"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:lineSpacingExtra="3dp"
+                                            android:textColor="#f95353"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="2dp"
+                                            android:text="资产总值(元)"
+                                            android:textColor="#5e5e5e"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/activity_fund_record_piechart_legend_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="96dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:orientation="vertical"></LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/ll_piechart_empty_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="155dp"
+                                android:gravity="center"
+                                android:text="暂无数据"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/activity_fund_record_piechart_empty_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="暂无数据"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                    <!--重仓股票-->
+                    <LinearLayout
+                        android:id="@+id/activity_fund_record_stock_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_14sp_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重仓股票" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_heavy_warehouse_stock_date"
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ebebeb" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="28dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="股票简称" />
+
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="市值(万元)" />
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="占净资产比例" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/activity_fund_record_heavy_warehouse_stock_rcv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <!--持仓债券-->
+                    <LinearLayout
+                        android:id="@+id/activity_fund_record_bond_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_14sp_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="持仓债券" />
+
+                            <TextView
+                                android:id="@+id/activity_fund_record_holding_debenture_date"
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ebebeb" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="28dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="股票简称" />
+
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="市值(万元)" />
+
+                            <TextView
+                                style="@style/text_12sp_gray2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="占净资产比例" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/activity_fund_record_holding_debenture_rcv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.changju.fanlitou.ui.ObservableScrollView>
+
+            <ImageButton
+                android:id="@+id/activity_fund_record_go_top_ib"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/backtop" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/include_loading"
+            layout="@layout/fragment_lazy_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/include_load_error"
+            layout="@layout/view_load_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</RelativeLayout>

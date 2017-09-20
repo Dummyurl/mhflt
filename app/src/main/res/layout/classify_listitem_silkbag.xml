@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:id="@+id/view_root"
+                android:background="@drawable/selector_btn_pressed"
+                android:clickable="true">
+
+    <ImageView
+        android:id="@+id/product_img_url"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/bid_name"
+        style="@style/text_16sp_black"
+        android:layout_width="200dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/product_img_url"
+        android:text="锦囊标题"/>
+
+    <TextView
+        android:id="@+id/sub_name"
+        style="@style/text_14sp_gray"
+        android:layout_width="200dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bid_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/product_img_url"
+        android:text="锦囊的副标题"/>
+
+    <TextView
+        android:id="@+id/author_name"
+        style="@style/text_10sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/product_img_url"
+        android:layout_below="@+id/sub_name"
+        android:layout_toEndOf="@+id/product_img_url"
+        android:gravity="bottom"
+        android:text="作者名字"/>
+
+    <TextView
+        android:id="@+id/bonus_interest"
+        style="@style/text_10sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/product_img_url"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/sub_name"
+        android:layout_toEndOf="@+id/author_name"
+        android:gravity="bottom|end"
+        android:layout_marginEnd="15dp"
+        android:text="2111-11-11"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/bonus_interest"/>
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/bg_line"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+</RelativeLayout>

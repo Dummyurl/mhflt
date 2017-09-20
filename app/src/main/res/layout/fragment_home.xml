@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imageTextButton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.home.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/banner_height"
+                app:canLoop="true" />
+
+
+            <LinearLayout
+                android:id="@+id/group_one_home"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:paddingTop="7dp">
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_fixed_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/fixed"
+                    imageTextButton:text="@string/fixed" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_fund_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/fund"
+                    imageTextButton:text="@string/fund" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_current_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/current"
+                    imageTextButton:text="@string/current" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_gold_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/gold"
+                    imageTextButton:text="@string/gold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/group_two_home"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp">
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_crowd_funding_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/crowd_funding"
+                    imageTextButton:text="@string/crowd_funding" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_abroad_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/abroad"
+                    imageTextButton:text="@string/abroad" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_insurance_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/insurance"
+                    imageTextButton:text="@string/insurance" />
+
+                <com.changju.fanlitou.ui.ImageTextButton
+                    android:id="@+id/btn_silk_bag_home"
+                    style="@style/ImageTextStyle"
+                    imageTextButton:img="@mipmap/silk_bag"
+                    imageTextButton:text="@string/silk_bag" />
+
+                <!--<com.changju.fanlitou.ui.ImageTextButton-->
+                <!--android:id="@+id/btn_newer_guide_home"-->
+                <!--style="@style/ImageTextStyle"-->
+                <!--imageTextButton:img="@mipmap/newer_guide"-->
+                <!--imageTextButton:text="@string/newer_guide" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_favorite_commend_home"
+                    style="@style/text_13sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/commend"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/commend"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/favorite_commend" />
+
+                <View
+                    style="@style/bg_line"
+                    android:layout_marginLeft="@dimen/four_favorite_margin"
+                    android:layout_marginRight="@dimen/four_favorite_margin" />
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="7dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/linear_favorite_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/layout_recommend_bid_title_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_recommend_bid_title_home"
+                    style="@style/text_13sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/hot"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/hot"
+                    android:gravity="center"
+                    android:padding="8dp" />
+
+                <View
+                    style="@style/bg_line"
+                    android:layout_marginLeft="@dimen/four_favorite_margin"
+                    android:layout_marginRight="@dimen/four_favorite_margin" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_recommend_bid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorBackground" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

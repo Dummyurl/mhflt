@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_tag_gray">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tv_clear_time"
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:text="预计2017.05.04清算"
+        android:textColor="@color/colorTextRed"
+        android:textSize="11sp" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/bg_line"
+        android:layout_below="@+id/tv_time" />
+
+    <ImageView
+        android:id="@+id/platform_list_logo_app"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/platform_name"
+        style="@style/text_12sp_black"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/platform_list_logo_app"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="huangjin" />
+
+    <TextView
+        android:id="@+id/bid_name"
+        style="@style/text_14sp_black"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/platform_list_logo_app"
+        android:singleLine="true"
+        android:text="huangjin" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/platform_list_logo_app"
+        android:layout_alignStart="@+id/bid_name"
+        android:text="content"
+        android:textColor="@color/colorTextThird"
+        android:textSize="11sp" />
+
+</RelativeLayout>

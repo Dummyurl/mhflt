@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/platform_1" />
+
+            <TextView
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="银行存管" />
+
+            <ImageView
+                android:id="@+id/pl_yhgc"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/platform_2" />
+
+            <TextView
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="账户直通" />
+
+            <ImageView
+                android:id="@+id/pl_zfzt"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/platform_3"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:text="债券转让"
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/pl_zjzr"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/platform_4"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:text="按日返利"
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/pl_arfl"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/platform_5"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:text="提现手续费"
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/pl_txsxf"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/platform_6"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:text="平台活动"
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/pl_pthd"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/platform_7"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:text="利息管理费"
+                style="@style/text_12sp_gray"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/pl_lxglf"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/platform_gou" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorBackground"/>
+</LinearLayout>

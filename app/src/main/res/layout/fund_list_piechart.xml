@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/highest_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/uparrow_divide_line">
+        <TextView
+            android:id="@+id/highest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:text="最高保障:" />
+        <TextView
+            android:id="@+id/highest_number"
+            android:layout_below="@+id/highest"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="----------------------" />
+        <ImageView
+            android:layout_alignTop="@+id/highest"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/highest"
+            android:background="@mipmap/highest_protect" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/fund_list_piechart"
+            android:layout_width="260dp"
+            android:layout_height="250dp" />
+
+        <LinearLayout
+            android:id="@+id/type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_child1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="待收本金(元)"
+                style="@style/text_12sp_gray2"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/receiving_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="20,000.00"
+                style="@style/text_16sp_black"
+                android:layout_marginBottom="4dp"/>
+
+
+            <View android:layout_height="1px"
+                android:layout_width="120dp"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:id="@+id/text_child2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="待收利息(元)"
+                style="@style/text_12sp_gray2"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/receiving_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="200.00"
+                style="@style/text_16sp_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/type_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/type2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="待收本金(元)"
+                style="@style/text_12sp_gray2"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/type2_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="20,000.00"
+                style="@style/text_16sp_black"
+                android:layout_marginBottom="4dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/uparrow_divide_line"
+        android:layout_below="@+id/rl_chart"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line_investreport" />
+
+    <TextView
+        android:id="@+id/go_invest_tv"
+        android:gravity="center"
+        android:text="暂未投资，投资赚返利吧~"
+        android:layout_below="@+id/rl_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        style="@style/text_12sp_gray"/>
+
+</RelativeLayout>

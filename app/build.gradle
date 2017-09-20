@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.growingio.android'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.changju.fanlitou"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1000300143
+        versionName "1.4.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        resValue("string", "growingio_project_id", "8cc581c98e8ef9c2")
+        resValue("string", "growingio_url_scheme", "growing.20f08e1a42ec7e80")
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+//        debug {
+//            minifyEnabled false
+//            applicationIdSuffix '.debug'
+//        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def fileName = "fanlitou_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('fltkey.jks')
+            storePassword "111111"
+            keyAlias "fanlitou"
+            keyPassword "111111"
+        }
+
+        release {
+            storeFile file('fltkey.jks')
+            storePassword "111111"
+            keyAlias "fanlitou"
+            keyPassword "111111"
+        }
+
+    }
+
+    productFlavors {
+
+        _baidu {
+            manifestPlaceholders = [CHANNEL_VALUE: "_baidu"]
+        }
+
+        _m91 {
+            manifestPlaceholders = [CHANNEL_VALUE: "_m91"]
+        }
+
+        _hiapk {
+            manifestPlaceholders = [CHANNEL_VALUE: "_hiapk"]
+        }
+
+        _qq {
+            manifestPlaceholders = [CHANNEL_VALUE: "_qq"]
+        }
+
+        _360 {
+            manifestPlaceholders = [CHANNEL_VALUE: "_360"]
+        }
+
+        _xiaomi {
+            manifestPlaceholders = [CHANNEL_VALUE: "_xiaomi"]
+        }
+
+        _wandoujia {
+            manifestPlaceholders = [CHANNEL_VALUE: "_wandoujia"]
+        }
+
+        _anzhi {
+            manifestPlaceholders = [CHANNEL_VALUE: "_anzhi"]
+        }
+
+        _mumayi {
+            manifestPlaceholders = [CHANNEL_VALUE: "_mumayi"]
+        }
+
+        _lenovomm {
+            manifestPlaceholders = [CHANNEL_VALUE: "_lenovomm"]
+        }
+
+        _gfan {
+            manifestPlaceholders = [CHANNEL_VALUE: "_gfan"]
+        }
+
+        _m3g {
+            manifestPlaceholders = [CHANNEL_VALUE: "_m3g"]
+        }
+
+        _liqucn {
+            manifestPlaceholders = [CHANNEL_VALUE: "_liqucn"]
+        }
+
+        _eoemarket {
+            manifestPlaceholders = [CHANNEL_VALUE: "_eoemarket"]
+        }
+
+        _huawei {
+            manifestPlaceholders = [CHANNEL_VALUE: "_huawei"]
+        }
+
+        _oppomobile {
+            manifestPlaceholders = [CHANNEL_VALUE: "_oppomobile"]
+        }
+
+        _ppzhushou {
+            manifestPlaceholders = [CHANNEL_VALUE: "_ppzhushou"]
+        }
+
+        _flyme {
+            manifestPlaceholders = [CHANNEL_VALUE: "_flyme"]
+        }
+
+        _sougou {
+            manifestPlaceholders = [CHANNEL_VALUE: "_sougou"]
+        }
+
+        _appchina {
+            manifestPlaceholders = [CHANNEL_VALUE: "_appchina"]
+        }
+
+        _leshi {
+            manifestPlaceholders = [CHANNEL_VALUE: "_leshi"]
+        }
+
+        _UC {
+            manifestPlaceholders = [CHANNEL_VALUE: "_UC"]
+        }
+
+        _chuizi {
+            manifestPlaceholders = [CHANNEL_VALUE: "_chuizi"]
+        }
+
+        _kuan {
+            manifestPlaceholders = [CHANNEL_VALUE: "_kuan"]
+        }
+
+    }
+
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.lzy.net:okgo:2.1.3'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile project(':PushSDK')
+    compile project(':calendar')
+    compile project(':lockpattern')
+    compile 'com.jakewharton:butterknife:7.0.1'
+    testCompile 'junit:junit:4.12'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile project(path: ':MPChartLib')
+    compile files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
+    compile 'com.lzy.widget:imagepicker:0.5.5'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.growingio.android:vds-android-agent:1.0.3@aar'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+//    compile files('libs/umeng-common-1.3.2.jar')
+    compile 'com.yanzhenjie:permission:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.orhanobut:logger:2.1.1'
+}

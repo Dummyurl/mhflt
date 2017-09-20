@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorStatusGray"/>
+
+    <FrameLayout
+        android:background="@android:color/white"
+        android:id="@+id/layout_tab_platform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tab_discover"
+            android:layout_width="243dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:tl_textsize="13sp"
+            app:tl_bar_color="@android:color/white"
+            app:tl_textUnselectColor="@color/colorTextRed"
+            app:tl_indicator_color="@color/colorTextRed"
+            app:tl_indicator_corner_radius="4dp"
+            app:tl_tab_space_equal="true"
+            app:tl_tab_padding="20dp"/>
+    </FrameLayout>
+
+    <com.changju.fanlitou.ui.NoScrollViewPager
+        android:id="@+id/view_pager_discover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

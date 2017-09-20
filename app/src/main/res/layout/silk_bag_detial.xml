@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorStatusRed"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed">
+
+        <ImageView
+            android:id="@+id/iv_back_my_account"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/ic_left_white"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="理财锦囊"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp"
+            android:src="@mipmap/ic_share"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/tv_article_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    style="@style/text_10sp_gray2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_article_title"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_read_count"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    style="@style/text_10sp_gray2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_article_title"
+                    android:gravity="end"/>
+
+                <View
+                    android:layout_below="@+id/tv_read_count"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    style="@style/bg_line"/>
+
+                <com.tencent.smtt.sdk.WebView
+                    android:id="@+id/web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/tv_author">
+
+                </com.tencent.smtt.sdk.WebView>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/include_loading"
+            layout="@layout/fragment_lazy_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@+id/include_load_error"
+            layout="@layout/view_load_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
+</LinearLayout>

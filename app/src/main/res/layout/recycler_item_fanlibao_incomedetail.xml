@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_income_yesterday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:text="+8.88"
+        android:textColor="@color/colorTextRed"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_income_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_income_yesterday"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="8888.88"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_income_yesterday"
+        android:layout_below="@+id/tv_income_yesterday"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="4dp"
+        android:text="2008-8-8" />
+
+    <TextView
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_income_total"
+        android:layout_below="@+id/tv_income_total"
+        android:layout_marginTop="4dp"
+        android:text="累计收益(元)" />
+
+    <View
+        style="@style/bg_line"
+        android:layout_alignLeft="@+id/tv_date"
+        android:layout_below="@+id/tv_date" />
+</RelativeLayout>

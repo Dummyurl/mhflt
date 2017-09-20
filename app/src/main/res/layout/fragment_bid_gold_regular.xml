@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp">
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/layout_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_dqjj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="8.00"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%+"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextSecondary"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"/>
+
+            <TextView
+                android:id="@+id/fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0.59"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextSecondary"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:id="@+id/tv_dqjj_cn"
+            style="@style/text_12sp_gray"
+            android:layout_below="@+id/layout_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layout_percent"
+            android:layout_marginStart="5dp"
+            android:text="年化收益"/>
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:id="@+id/tv_fl_cn"
+            style="@style/text_12sp_gray"
+            android:layout_toEndOf="@+id/tv_dqjj_cn"
+            android:layout_below="@+id/layout_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="返利"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout_top"
+        android:gravity="center"
+        android:id="@+id/layout_tag"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_tag_red"-->
+        <!--android:textColor="@color/colorTextRed"-->
+        <!--android:textSize="10sp"-->
+        <!--android:paddingTop="2dp"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:paddingStart="4dp"-->
+        <!--android:paddingEnd="4dp"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="账户直通"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_tag_red"-->
+        <!--android:textColor="@color/colorTextRed"-->
+        <!--android:textSize="10sp"-->
+        <!--android:paddingTop="2dp"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:paddingStart="4dp"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingEnd="4dp"-->
+        <!--android:text="按日返"/>-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/tv_ljjz"
+        style="@style/text_12sp_gray"
+        android:text="投资期限"
+        android:layout_marginBottom="27dp"
+        android:id="@+id/tv_tzqx_cn"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/view_line1"/>
+
+    <TextView
+        android:layout_below="@+id/layout_tag"
+        style="@style/text_16sp_black"
+        android:text="0.3%"
+        android:id="@+id/tv_tzqx"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/view_line1"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_below="@+id/layout_tag"
+        android:background="@color/colorLine"
+        android:id="@+id/view_line1"
+        android:layout_marginTop="30dp"
+        android:layout_width="2px"
+        android:layout_marginEnd="42dp"
+        android:layout_toStartOf="@+id/tv_zxqt"
+        android:layout_height="40dp"/>
+
+    <TextView
+        style="@style/text_12sp_gray"
+        android:text="最小起投"
+        android:layout_below="@+id/tv_zxqt"
+        android:id="@+id/tv_zxqt_cn"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/text_16sp_black"
+        android:text="10g"
+        android:id="@+id/tv_zxqt"
+        android:layout_below="@+id/layout_tag"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_below="@+id/layout_tag"
+        android:layout_toEndOf="@+id/tv_zxqt"
+        android:background="@color/colorLine"
+        android:id="@+id/view_line2"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="42dp"
+        android:layout_width="2px"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_below="@+id/tv_ljjz"
+        style="@style/text_12sp_gray"
+        android:text="----"
+        android:id="@+id/tv_ljjz_cn"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/view_line2"/>
+
+    <TextView
+        android:layout_below="@+id/layout_tag"
+        style="@style/text_16sp_black"
+        android:text="--"
+        android:id="@+id/tv_ljjz"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/view_line2"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

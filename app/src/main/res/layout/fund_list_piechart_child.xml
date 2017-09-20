@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/fund_list_piechart"
+        android:layout_width="260dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/type_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_child1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="待收本金(元)"
+            style="@style/text_12sp_gray2"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/receiving_principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="20,000.00"
+            style="@style/text_16sp_black"
+            android:layout_marginBottom="4dp"/>
+
+
+        <View android:layout_height="1px"
+            android:layout_width="120dp"
+            android:background="@color/colorLine"/>
+
+        <TextView
+            android:id="@+id/text_child2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="待收利息(元)"
+            style="@style/text_12sp_gray2"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/receiving_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="200.00"
+            style="@style/text_16sp_black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/type2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="待收本金(元)"
+            style="@style/text_12sp_gray2"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/type2_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="20,000.00"
+            style="@style/text_16sp_black"
+            android:layout_marginBottom="4dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@+id/fund_list_piechart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/line_investreport"/>
+
+</RelativeLayout>

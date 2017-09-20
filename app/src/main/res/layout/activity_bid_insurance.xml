@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorStatusRed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@color/colorTextRed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:id="@+id/iv_back_my_account"
+            android:src="@mipmap/ic_left_white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:id="@+id/tv_title"
+            android:text="意外险"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/layout_scroll"
+        android:layout_marginTop="@dimen/action_bar_height"
+        android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.changju.fanlitou.ui.ResizableImageView
+                        android:id="@+id/iv_insurance_title_bid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_insurance_name_bid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="吃货险"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_fljx"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="返利加息" />
+
+                    <TextView
+                        android:id="@+id/tv_tbfy"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_fljx"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="投保费用" />
+
+                    <TextView
+                        android:id="@+id/tv_flsj"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_tbfy"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="返利时间" />
+
+                    <TextView
+                        android:id="@+id/tv_bxgs"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_flsj"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="保险公司" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_bid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="6%"
+                        android:textColor="@color/colorTextRed"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_money_bid"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_percent_bid"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="120元起" />
+
+                    <TextView
+                        android:id="@+id/tv_tbcr"
+                        style="@style/text_14sp_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_money_bid"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="投保次日" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/wap_logo"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tv_tbcr"
+                        android:layout_marginTop="5dp"/>
+                </RelativeLayout>
+
+                <View style="@style/bg_line" />
+
+                <TextView
+                    style="@style/text_14sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="产品介绍" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/layout_imgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_14sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="理赔流程" />
+
+                <View
+                    style="@style/bg_line"/>
+
+                <TextView
+                    style="@style/text_12sp_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:id="@+id/tv_lplc"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="介绍文字" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:id="@+id/tv_buy"
+                    android:background="@drawable/shape_round_rectangle_red_soild"
+                    android:text="前往购买"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_buy_now"
+        android:background="@drawable/shape_left_radio_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:textColor="@android:color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:text="前往购买" />
+    <include
+        android:layout_marginTop="@dimen/action_bar_height"
+        android:id="@+id/include_loading"
+        layout="@layout/fragment_lazy_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:layout_marginTop="@dimen/action_bar_height"
+        android:id="@+id/include_load_error"
+        layout="@layout/view_load_error"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
+</FrameLayout>

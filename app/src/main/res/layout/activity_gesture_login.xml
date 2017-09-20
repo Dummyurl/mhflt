@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusGray" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:text="June"
+        android:textColor="@color/gesture_normal"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="151****5627，请设置手势密码。"
+        android:textColor="@color/gesture_normal"
+        android:textSize="14sp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gesture_normal"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp" />
+
+
+        <com.star.lockpattern.widget.LockPatternView
+            android:id="@+id/lockPatternView"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom|center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/forgetGestureBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#999999"
+                android:background="@drawable/selector_btn_pressed"
+                android:text="@string/gesture_forget_gesture"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:text="|"/>
+
+            <TextView
+                android:id="@+id/changeAccountBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/selector_btn_pressed"
+                android:textColor="#999999"
+                android:text="切换账号"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+</LinearLayout>

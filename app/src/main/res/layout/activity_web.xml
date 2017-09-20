@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_web"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusRed"
+        android:id="@+id/tv_status_bar"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_title_normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed">
+
+        <ImageView
+            android:id="@+id/iv_back_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_left_white"/>
+
+        <TextView
+            android:id="@+id/tv_title_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="48dp"
+            android:layout_marginStart="48dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_share"
+            android:gravity="center"
+            android:text="分享"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_title_platform"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="6dp"
+            android:id="@+id/layout_back">
+            <ImageView
+                android:id="@+id/iv_back_platform"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_left_white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="返利投"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_platform_name"
+            android:text="宜人贷"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/tv_refresh"
+            android:layout_toEndOf="@+id/layout_back"
+            android:layout_marginTop="3dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_bid_name"
+            android:text="宜定盈1月期"
+            android:layout_toStartOf="@+id/tv_refresh"
+            android:layout_toEndOf="@+id/layout_back"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginTop="1dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/tv_platform_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_refresh"
+            android:gravity="center"
+            android:text="刷新"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tencent.smtt.sdk.WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView_web" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_web"
+            style="@style/WebProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:visibility="visible" />
+        <include
+            android:id="@+id/empty_view_root"
+            layout="@layout/view_load_error"
+            android:visibility="gone"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#4D000000"
+            android:id="@+id/view"
+            />
+    </FrameLayout>
+
+</LinearLayout>

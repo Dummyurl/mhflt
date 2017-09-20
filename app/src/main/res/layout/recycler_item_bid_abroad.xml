@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp">
+
+        <TextView
+            android:id="@+id/platform_name"
+            style="@style/text_12sp_black"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网利宝" />
+
+        <TextView
+            android:id="@+id/t2"
+            style="@style/text_13sp_black"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/platform_name"
+            android:text=" | " />
+
+        <TextView
+            android:id="@+id/bid_name"
+            style="@style/text_12sp_gray"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/t2"
+            android:singleLine="true"
+            android:text="黄金宝12345" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:id="@+id/rectangle_tag"
+            android:layout_alignParentRight="true">
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/bg_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="90dp">
+            <LinearLayout
+                android:id="@+id/interest"
+                android:layout_marginTop="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bid_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.0"
+                    android:textColor="@color/colorTextRed"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/bonus_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/year_income"
+                    android:text="+2%"
+                    android:textColor="@color/colorTextRed"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/fanli"
+                android:src="@mipmap/fanli"
+                android:layout_width="34dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@id/interest"
+                android:layout_alignTop="@id/interest"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="-16dp"
+                />
+            <TextView
+                android:layout_below="@id/interest"
+                android:text="年化收益"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_12sp_gray2"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="90dp">
+            <TextView
+                android:id="@+id/duration"
+                android:layout_marginTop="33dp"
+                android:text="3个月"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_16sp_gray"/>
+
+            <TextView
+                android:layout_below="@id/duration"
+                android:text="投资期限"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_12sp_gray2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="90dp">
+            <TextView
+                android:id="@+id/min_amount"
+                android:layout_marginTop="33dp"
+                android:text="123456.123"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_16sp_gray"/>
+
+            <TextView
+                android:id="@+id/share_name"
+                android:layout_below="@id/min_amount"
+                android:text="起投金额"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_12sp_gray2"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/bg_line"/>
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_14sp_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="温馨提示"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_btn_pressed"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:src="@mipmap/close_black" />
+    </RelativeLayout>
+
+    <View style="@style/bg_line" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_12sp_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="14dp"
+        android:text="应监管要求，提现需转入持牌金融机构进行划转，划转后未提现部分可享受再生息，生息明细可在返利宝中查看" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/shape_bg_fanlibao_pink_soild"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="返利宝七日年化收益"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:text="约"
+                android:textColor="@color/colorTextRed"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/year_yld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="4.45"
+                android:layout_gravity="bottom"
+                android:textColor="@color/colorTextRed"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="%"
+                android:layout_gravity="bottom"
+                android:textColor="@color/colorTextRed"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="(平均收益比余额宝高约0.5-1.0%)"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/tv_agreement"
+        android:text="同意《用户须知及风险提示》《鸿积分财宝积分增值服务协议》，即可享受返利生息。"
+        android:textColor="@color/colorBidName"
+        android:textSize="11sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_pos"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_tag_red"
+            android:gravity="center"
+            android:text="我要生息"
+            android:textColor="@color/colorTextRed"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_neg"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_tag_gray"
+            android:gravity="center"
+            android:text="仍然提现"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@mipmap/head_img"
+                android:id="@+id/iv_user_user"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_username_user"
+                android:paddingStart="9dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                style="@style/text_13sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp" />
+
+            <ImageView
+                android:src="@mipmap/ic_money"
+                android:layout_marginStart="69dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/tv_money_user"
+                style="@style/text_13sp_black"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="今日返利0元"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/layout_available_balance_user"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_13sp_black"
+                android:text="返利宝余额(元)"
+                android:id="@+id/tv_jf_balance_cn"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="0.00"
+                android:id="@+id/tv_available_balance_user"
+                android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:layout_below="@+id/layout_available_balance_user"
+            android:layout_alignParentBottom="true"
+            android:text="七日年化收益：0.00%"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:id="@+id/tv_year_yld"
+            android:textColor="#999999"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="提现"
+            android:gravity="center"
+            android:id="@+id/btn_withdrawals_user"
+            android:background="@drawable/shape_tag_red_soild"
+            android:textSize="12sp"
+            android:layout_alignBottom="@+id/layout_available_balance_user"
+            android:layout_marginStart="14dp"
+            android:textColor="@android:color/white"
+            android:layout_toEndOf="@+id/layout_available_balance_user" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/layout_background"
+        android:layout_gravity="bottom">
+        <LinearLayout
+            android:background="@color/colorMineBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2px"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_tag">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计返利(元)"
+                style="@style/text_14sp_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:id="@+id/tv_accumulated_rebates_user"
+                android:layout_marginTop="5dp"
+                style="@style/text_14sp_gray"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/colorMineBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返利余额(元)"
+                style="@style/text_14sp_gray"/>
+
+            <TextView
+                android:id="@+id/tv_freezing_amount_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0.00"
+                style="@style/text_14sp_gray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

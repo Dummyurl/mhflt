@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusGray" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:src="@mipmap/ic_left_black" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="June"
+        android:textColor="#666666"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="151****5627，请设置手势密码。"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <com.star.lockpattern.widget.LockPatternIndicator
+        android:id="@+id/lockPatterIndicator"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/create_gesture_default"
+        android:textColor="@color/gesture_normal"
+        android:textSize="14sp" />
+
+    <com.star.lockpattern.widget.LockPatternView
+        android:id="@+id/lockPatternView"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp" />
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="跳过"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

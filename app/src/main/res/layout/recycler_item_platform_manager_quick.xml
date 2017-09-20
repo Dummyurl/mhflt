@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/shape_tag_gray"
+    android:paddingTop="6dp"
+    android:id="@+id/layout_root"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="11dp">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_platform_logo"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="26dp"
+            style="@style/text_16sp_black"
+            android:text="爱钱帮"
+            android:gravity="start|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_platform_name"
+            android:layout_marginStart="6dp"/>
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_withdraw"
+            android:background="@drawable/selector_btn_unanble"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="提现"/>
+    </LinearLayout>
+
+    <View
+        style="@style/bg_line"
+        android:layout_below="@+id/layout_top"
+        android:layout_marginTop="4dp"
+        android:id="@+id/view_line1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextRed"
+        android:layout_below="@+id/view_line1"
+        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/tv_receiving_principal_interest_cn"
+        android:text="9000.00"
+        android:gravity="center"
+        android:id="@+id/tv_balance"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_12sp_gray2"
+        android:layout_below="@+id/tv_balance"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/tv_receiving_principal_interest_cn"
+        android:text="可用余额"
+        android:gravity="center"
+        android:id="@+id/tv_balance_cn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_14sp_black"
+        android:text="100.00"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view_line1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/tv_receiving_principal_interest"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_12sp_gray2"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:id="@+id/tv_receiving_principal_interest_cn"
+        android:layout_below="@+id/tv_receiving_principal_interest"
+        android:layout_marginTop="10dp"
+        android:text="待收本息"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_14sp_black"
+        android:layout_below="@+id/view_line1"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/tv_receiving_principal_interest_cn"
+        android:text="2"
+        android:gravity="center"
+        android:id="@+id/tv_invest_bids"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_12sp_gray2"
+        android:layout_below="@+id/tv_balance"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tv_receiving_principal_interest_cn"
+        android:text="在投标的"
+        android:gravity="center"
+        android:id="@+id/tv_invest_bids_cn"/>
+
+    <View
+        style="@style/bg_line"
+        android:layout_below="@+id/tv_receiving_principal_interest_cn"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view_line2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_12sp_gray"
+        android:text="招商银行：7896****7897"
+        android:layout_below="@+id/view_line2"
+        android:id="@+id/tv_bank_info"
+        android:layout_marginTop="13dp"/>
+</RelativeLayout>

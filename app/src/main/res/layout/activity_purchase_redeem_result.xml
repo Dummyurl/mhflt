@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusRed" />
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/colorTextRed">
+
+        <ImageView
+            android:id="@+id/iv_back_my_account"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_left_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="结果详情" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fund_name"
+                style="@style/text_14sp_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:text="基金名称基金名称基金名称基金名称" />
+
+            <View
+                style="@style/bg_line"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_application"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_application"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@mipmap/ic_application" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_application"
+                    android:background="@color/colorTextRed"
+                    android:layout_below="@+id/iv_application"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_application_status"
+                    android:layout_toEndOf="@+id/iv_application"
+                    android:layout_marginTop="14dp"
+                    style="@style/text_12sp_black"
+                    android:layout_marginStart="17dp"
+                    android:text="申请已受理"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_application_time"
+                    android:layout_toEndOf="@+id/iv_application"
+                    android:layout_marginTop="32dp"
+                    style="@style/text_12sp_gray"
+                    android:layout_marginStart="17dp"
+                    android:text="2017.03.02   12:38"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_payment"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_payment_1"
+                    android:background="@color/colorLine"
+                    android:layout_marginStart="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_payment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/line_payment_1"
+                    android:src="@mipmap/ic_payment_unchecked" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_payment"
+                    android:background="@color/colorLine"
+                    android:layout_below="@+id/iv_payment"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_payment_status"
+                    android:layout_toEndOf="@+id/iv_payment"
+                    android:layout_marginTop="14dp"
+                    style="@style/text_12sp_black"
+                    android:layout_marginStart="17dp"
+                    android:text="确认成功支付50元"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_payment_time"
+                    android:layout_toEndOf="@+id/iv_payment"
+                    android:layout_marginTop="32dp"
+                    style="@style/text_12sp_gray"
+                    android:layout_marginStart="17dp"
+                    android:text="2017.03.02   12:38"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_calculation"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_calculation_1"
+                    android:background="@color/colorLine"
+                    android:layout_marginStart="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_calculation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/line_calculation_1"
+                    android:src="@mipmap/ic_calculation" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_calculation"
+                    android:background="@color/colorLine"
+                    android:layout_below="@+id/iv_calculation"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_calculation_status"
+                    android:layout_toEndOf="@+id/iv_calculation"
+                    android:layout_marginTop="14dp"
+                    style="@style/text_12sp_black"
+                    android:layout_marginStart="17dp"
+                    android:text="赎回金额确认"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_calculation_time"
+                    android:layout_toEndOf="@+id/iv_calculation"
+                    android:layout_marginTop="32dp"
+                    style="@style/text_12sp_gray"
+                    android:layout_marginStart="17dp"
+                    android:text="预计2017.03.02"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_income"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:paddingBottom="16dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/line_income_1"
+                    android:background="@color/colorLine"
+                    android:layout_marginStart="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_income"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/line_income_1"
+                    android:src="@mipmap/ic_income" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_income_status"
+                    android:layout_toEndOf="@+id/iv_income"
+                    android:layout_marginTop="14dp"
+                    style="@style/text_12sp_black"
+                    android:layout_marginStart="17dp"
+                    android:text="赎回金额到账（招商银行卡）"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_income_time"
+                    android:layout_toEndOf="@+id/iv_income"
+                    android:layout_marginTop="32dp"
+                    style="@style/text_12sp_gray"
+                    android:layout_marginStart="17dp"
+                    android:text="预计2017.03.02"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="订单号：12345678966908"
+                android:id="@+id/tv_order_no"
+                android:gravity="center"
+                style="@style/text_12sp_gray2"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:background="@color/colorBackground"/>
+
+            <FrameLayout
+                android:background="@color/colorBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="查看基金"
+                    android:id="@+id/btn_view_fund"
+                    android:background="@drawable/shape_tag_red_soild"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/include_loading"
+            layout="@layout/fragment_lazy_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/include_load_error"
+            layout="@layout/view_load_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/crowd_funding_frame_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/bid_image_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/crowd_funding_logo_height"
+                    android:scaleType="fitXY" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="@dimen/crowd_funding_margin_end"
+                    android:layout_marginEnd="@dimen/crowd_funding_margin_end">
+
+                    <com.changju.fanlitou.ui.RoundProgressBar
+                        android:id="@+id/round_progress"
+                        android:layout_width="@dimen/crowd_funding_ring_width"
+                        android:layout_height="@dimen/crowd_funding_ring_width"
+                        android:layout_gravity="center"
+                        app:roundColor="#cdeaff"
+                        app:roundProgressColor="@color/colorTextBlue"
+                        app:roundWidth="@dimen/crowd_funding_round_width"
+                        app:textSize="0sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_oval"
+                        android:layout_width="@dimen/crowd_funding_oval_width"
+                        android:layout_height="@dimen/crowd_funding_oval_width"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_white_oval_soild"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bid_interest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="90%"
+                            android:textColor="@color/colorBidName"
+                            android:textSize="13sp" />
+
+
+                        <View
+                            android:layout_width="@dimen/crowd_funding_line_width"
+                            android:layout_height="1px"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorLine" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="项目进度"
+                            android:textColor="@color/colorBidName"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/crowd_funding_tag_height"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_tzqx_cn"
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_ljjz"
+                android:layout_marginBottom="27dp"
+                android:layout_marginTop="7dp"
+                android:layout_toStartOf="@+id/view_line1"
+                android:gravity="center"
+                android:text="预约总额" />
+
+            <TextView
+                android:id="@+id/tv_tzqx"
+                style="@style/text_16sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_top"
+                android:layout_marginTop="30dp"
+                android:layout_toStartOf="@+id/view_line1"
+                android:gravity="center"
+                android:text="0.3%" />
+
+            <View
+                android:id="@+id/view_line1"
+                android:layout_width="2px"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout_top"
+                android:layout_marginEnd="42dp"
+                android:layout_marginTop="30dp"
+                android:layout_toStartOf="@+id/tv_zxqt"
+                android:background="@color/colorBackground" />
+
+            <TextView
+                android:id="@+id/tv_zxqt_cn"
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_zxqt"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="剩余时间" />
+
+            <TextView
+                android:id="@+id/tv_zxqt"
+                style="@style/text_16sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_top"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:text="10g" />
+
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="2px"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout_top"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/tv_zxqt"
+                android:background="@color/colorBackground" />
+
+            <TextView
+                android:id="@+id/tv_ljjz_cn"
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tv_ljjz"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/view_line2"
+                android:gravity="center"
+                android:text="返利加息" />
+
+            <TextView
+                android:id="@+id/tv_ljjz"
+                style="@style/text_16sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/layout_top"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/view_line2"
+                android:gravity="center"
+                android:text="--" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ljjz_cn"
+                android:layout_marginTop="21dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/recycler_view"
+                android:background="@color/colorBackground" />
+
+            <RelativeLayout
+                android:id="@+id/layout_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:background="@android:color/white"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:paddingTop="9dp">
+
+                <TextView
+                    android:id="@+id/tv_cpxq"
+                    style="@style/text_12sp_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:text="产品详情" />
+
+                <View
+                    style="@style/bg_line"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tv_cpxq" />
+
+                <View
+                    style="@style/bg_line"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_cpxq" />
+
+            </RelativeLayout>
+
+            <com.tencent.smtt.sdk.WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_relative">
+
+            </com.tencent.smtt.sdk.WebView>
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/web_view"
+                android:layout_marginBottom="17dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/shape_round_rectangle_red_soild"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="前往购买"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_buy_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/shape_left_radio_red"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:text="前往购买"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/include_loading"
+        layout="@layout/fragment_lazy_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height" />
+
+    <include
+        android:id="@+id/include_load_error"
+        layout="@layout/view_load_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height" />
+
+    <ImageView
+        android:id="@+id/iv_back_my_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_left_white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#4D000000"
+        android:id="@+id/view"
+        />
+</FrameLayout>

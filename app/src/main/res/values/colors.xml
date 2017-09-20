@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#f94529</color>
+    <color name="colorTitle">#f95353</color>
+    <color name="colorBidName">#5E5E5E</color>
+    <color name="colorLine">#cccccc</color>
+    <color name="colorBackground">#f2f2f2</color>
+    <color name="colorProgressBlue">#538eeb</color>
+    <color name="colorTextOrange">#FD7720</color>
+    <color name="colorTextRed">#F94529</color>
+    <color name="colorProgressBackground">#D5E3F9</color>
+    <color name="colorProgressBackground2">#DDDDDD</color>
+    <color name="colorBackgroundRed">#F94529</color>
+    <color name="colorTextBlue">#4A8FEC</color>
+    <color name="colorTextYellow">#FF942B</color>
+    <color name="chart_blue">#538EEB</color>
+    <color name="chart_blue2">#89B2F2</color>
+    <color name="chart_green">#6DB247</color>
+    <color name="chart_green2">#9ED182</color>
+    <color name="chart_yellow">#FDBA39</color>
+    <color name="chart_yellow2">#F4C56A</color>
+    <color name="chart_orange">#FD7720</color>
+    <color name="chart_orange2">#FF9A58</color>
+
+    <color name="colorTextSecondary">#323232</color>
+    <color name="colorTextPrimary">#666666</color>
+    <color name="colorTextThird">#A5A5A5</color>
+
+    <color name="colorMineBackground">#ffe9d4</color>
+    <color name="progress_red">#F94529</color>
+
+    <color name="colorStatusRed">#ad301c</color>
+    <color name="colorStatusGray">#b1b1b1</color>
+    <color name="colorHint">#cccccc</color>
+    <color name="gesture_normal">#666666</color>
+
+    <color name="fund_text_red">#f42c20</color>
+    <color name="fund_text_green">#5ca637</color>
+    
+    <color name="colorBannerBG">#66000000</color>
+    <color name="colorTextGreen">#6db247</color>
+</resources>

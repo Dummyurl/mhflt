@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="crowd_funding_logo_height">181dp</dimen>
+    <dimen name="crowd_funding_oval_width">64dp</dimen>
+    <dimen name="crowd_funding_ring_width">70dp</dimen>
+    <dimen name="crowd_funding_round_width">6dp</dimen>
+    <dimen name="crowd_funding_oval_radius">26dp</dimen>
+    <dimen name="crowd_funding_line_width">46dp</dimen>
+    <dimen name="crowd_funding_frame_height">226dp</dimen>
+    <dimen name="crowd_funding_margin_end">10dp</dimen>
+    <dimen name="crowd_funding_tag_height">30dp</dimen>
+    <dimen name="withdraw_bg_no_bank_height">104dp</dimen>
+    <dimen name="loading_width">48dp</dimen>
+</resources>

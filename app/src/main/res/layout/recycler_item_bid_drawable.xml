@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rb_bid_drawable"
+    style="@style/platformRadioStyle" />
+
+    <!-- 需要 enable=false 灰色样式时加上下面这行代码-->
+    <!--android:background="@drawable/selector_shape_bid_drawable_button"-->

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.changju.fanlitou">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name = "android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".base.MyApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.GuideActivity"/>
+        <activity android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".activity.classifylist.AbroadActivity"/>
+        <activity android:name=".activity.classifylist.GoldActivity"/>
+        <activity android:name=".activity.classifylist.CrowdFundingActivity"/>
+        <activity android:name=".activity.classifylist.InsuranceActivity"/>
+        <activity android:name=".activity.classifylist.CurrentActivity"/>
+        <!--<activity android:name=".activity.classifylist.NewerGuideActivity"/>-->
+        <activity android:name=".activity.classifylist.SilkBagActivity"/>
+        <activity android:name=".activity.classifylist.FixedActivity"/>
+        <activity android:name=".activity.classifylist.FundActivity"/>
+
+        <activity android:name=".activity.mine.MoneyDetailActivity"/>
+        <activity android:name=".activity.mine.TakeMoneyRecordActivity"/>
+        <activity android:name=".activity.InvestReportChildActivity"/>
+
+        <activity android:name=".activity.fund.FundPurchaseActivity"/>
+        <activity android:name=".activity.fund.FundRedeemActivity"/>
+
+        <activity android:name=".activity.mine.MyAccountActivity"/>
+        <activity android:name=".activity.fund.MyFundActivity"/>
+        <activity android:name=".activity.mine.FanlibaoActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.mine.MyFundTradeRecordActivity"/>
+        <activity android:name=".activity.bid.BidInsuranceActivity"/>
+        <activity android:name=".activity.account.AccountCollectionDetailsActivity"/>
+        <activity android:name=".activity.mine.ChangePwdActivity"/>
+        <activity android:name=".activity.mine.InvestRecordActivity"/>
+        <activity android:name=".activity.mine.RedBagActivity"/>
+        <activity android:name=".activity.mine.EnchashmentActivity"/>
+        <activity android:name=".activity.mine.ManagerBankCardActivity"/>
+        <activity android:name=".activity.bid.BidCurrentActivity"/>
+        <activity android:name=".activity.account.DailyRebateActivity"/>
+        <activity android:name=".activity.platform.PlatformDetailActivity"/>
+        <activity android:name=".activity.mine.ChangeBankActivity"/>
+        <activity android:name=".activity.bid.BidFixedActivity"/>
+        <activity android:name=".activity.bid.BidVcActivity"/>
+        <activity android:name=".activity.bid.BidAbroadActivity"/>
+        <activity android:name=".activity.bid.BidGoldActivity"/>
+        <activity android:name=".activity.bid.BidCrowdFundingActivity"/>
+        <activity android:name=".activity.WebActivity"/>
+        <activity android:name=".activity.classifylist.SilkBagDetialActivity"/>
+        <activity android:name=".lock_pattern.activity.CreateGestureActivity"/>
+        <activity android:name=".lock_pattern.activity.GestureLoginActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.mine.ConfirmPWDActivity"/>
+
+        <activity android:name=".activity.SplashActivity" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="growing.20f08e1a42ec7e80"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.intelligent.InvestConfirmActivity" />
+        <activity android:name=".activity.intelligent.OpenAccountActivity" />
+        <activity android:name=".activity.intelligent.RechargeActivity" />
+        <activity android:name=".activity.mine.PlatformManagerActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.intelligent.IntelligentWithdrawActivity" />
+        <activity android:name=".activity.intelligent.PurchaseResultActivity" />
+        <activity android:name=".activity.intelligent.WithdrawResultActivity" />
+
+        <activity android:name=".activity.fund.FundDetailActivity" />
+        <activity android:name=".activity.fund.FundIncomeActivity" />
+        <activity android:name=".activity.fund.FundPerformanceActivity" />
+        <activity android:name=".activity.fund.FundFeeRateActivity" />
+        <activity android:name=".activity.fund.FundManagerActivity" />
+        <activity android:name=".activity.fund.FundHisDividendsActivity" />
+        <activity android:name=".activity.fund.FundRecordActivity" />
+        <activity android:name=".activity.fund.FundQuestionActivity" />
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.fund.FundSearchActivity" />
+        <activity android:name=".activity.fund.OpenFundActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activity.fund.PurchaseRedeemResultActivity" />
+        <activity android:name=".activity.fund.FundQuestionResultActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.platform.PlatformSearchActivity" />
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="587e1c3dc62dca45d00011e1">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="5978c20b1600e4bddfc93a7d4a062e3d">
+        </meta-data>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${CHANNEL_VALUE}" />
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="favorite_padding">5.5dp</dimen>
+    <dimen name="four_favorite_margin">22dp</dimen>
+    <dimen name="banner_height">155dp</dimen>
+    <dimen name="platforms_padding">24dp</dimen>
+    <dimen name="tab_height">40dp</dimen>
+    <dimen name="red_line_padding">45dp</dimen>
+    <dimen name="action_bar_height">46dp</dimen>
+    <dimen name="agreement_height">400dp</dimen>
+    <dimen name="main_activity_width">280dp</dimen>
+    <dimen name="main_activity_height">240dp</dimen>
+    <dimen name="input_offset_height">-50dp</dimen>
+</resources>

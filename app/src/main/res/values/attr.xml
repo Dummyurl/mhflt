@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="imageTextButton">
+        <attr name="img" format="reference" />
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"/>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"/>
+        <attr name="textIsDisplayable" format="boolean"/>
+        <attr name="style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FluidLayout">
+        <attr name="gravity" >
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FluidLayout_Layout">
+        <attr name="layout_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomButtonStyle">
+        <attr name="DrawableEnd" format="reference" />
+        <attr name="Text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="XRefreshView">
+    <attr name="isHeightMatchParent" format="boolean" />
+    <attr name="isWidthMatchParent" format="boolean" />
+    <attr name="autoRefresh" format="boolean" />
+    <attr name="autoLoadMore" format="boolean" />
+    </declare-styleable>
+
+</resources>
+

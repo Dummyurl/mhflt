@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorStatusRed"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorTextRed"
+        android:layout_height="@dimen/action_bar_height">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:id="@+id/iv_back_my_account"
+            android:src="@mipmap/ic_left_white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="修改密码"
+            android:layout_centerVertical="true"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/head_img"/>
+
+        <com.changju.fanlitou.ui.EditTextWithDel
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="@style/text_14sp_black"
+            android:hint="原密码"
+            android:maxLength="12"
+            android:paddingEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#cccccc"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:id="@+id/et_pwd"
+            android:paddingStart="15dp"
+            android:background="@drawable/shape_tag_black"/>
+
+        <com.changju.fanlitou.ui.EditTextWithDel
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingEnd="6dp"
+            style="@style/text_14sp_black"
+            android:hint="新密码6-12位"
+            android:textColorHint="#cccccc"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:inputType="textPassword"
+            android:id="@+id/et_new_pwd"
+            android:paddingStart="15dp"
+            android:maxLength="12"
+            android:background="@drawable/shape_edit_gray"/>
+
+        <com.changju.fanlitou.ui.EditTextWithDel
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            style="@style/text_14sp_black"
+            android:paddingEnd="6dp"
+            android:hint="确认新密码"
+            android:textColorHint="#cccccc"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:inputType="textPassword"
+            android:id="@+id/et_new_pwd_twice"
+            android:paddingStart="15dp"
+            android:maxLength="12"
+            android:background="@drawable/shape_edit_gray"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/selector_btn_update"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:enabled="false"
+            android:id="@+id/btn_ok_chang_pwd"
+            android:text="@string/btn_ok"/>
+
+    </LinearLayout>
+
+</LinearLayout>

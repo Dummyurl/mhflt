@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:paddingTop="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:clickable="true"
+    android:id="@+id/rc_invest_report_child"
+    android:background="@drawable/selector_btn_pressed">
+
+
+        <ImageView
+            android:id="@+id/iv_platform_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/abroad"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_name_investreport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/iv_platform_icon"
+            android:layout_toRightOf="@+id/iv_platform_icon"
+            android:text="固收"
+            style="@style/text_14sp_black"/>
+
+        <TextView
+            android:id="@+id/tv_amount_investreport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待收本息：123.456"
+            android:layout_below="@id/tv_name_investreport"
+            android:layout_marginTop="8dp"
+            android:layout_alignLeft="@+id/tv_name_investreport"
+            android:layout_alignStart="@+id/tv_name_investreport"
+            style="@style/text_12sp_gray2"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_bid_count_investreport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资产品：6个"
+                style="@style/text_12sp_gray"/>
+            <ImageView
+                android:id="@+id/invest_report_arrow"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_bid_count_investreport"
+                android:layout_width="8dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_down_black" />
+        </RelativeLayout>
+
+
+    <View style="@style/bg_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

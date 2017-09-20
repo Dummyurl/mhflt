@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layout_real"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            style="@style/bg_line"/>
+
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                style="@style/text_14sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="持卡人"
+                android:gravity="center_vertical"/>
+
+            <com.changju.fanlitou.ui.EditTextWithDel
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:paddingEnd="6dp"
+                android:layout_height="match_parent"
+                style="@style/text_14sp_black"
+                android:id="@+id/et_name"
+                android:hint="请输入真实姓名"
+                android:textColorHint="@color/colorHint"
+                android:paddingStart="20dp"
+                android:background="@drawable/selector_edit_text_enable"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:id="@+id/layout_id_num"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                style="@style/text_14sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="身份证号"
+                android:gravity="center_vertical"/>
+
+            <com.changju.fanlitou.ui.EditTextWithDel
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:paddingEnd="6dp"
+                android:layout_height="match_parent"
+                style="@style/text_14sp_black"
+                android:maxLength="18"
+                android:id="@+id/et_id_num"
+                android:inputType="number"
+                android:paddingStart="20dp"
+                android:background="@drawable/selector_edit_text_enable"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                style="@style/text_14sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="银行卡号"
+                android:gravity="center_vertical"/>
+
+            <com.changju.fanlitou.ui.EditTextWithDel
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:paddingEnd="6dp"
+                android:layout_height="match_parent"
+                style="@style/text_14sp_black"
+                android:maxLength="29"
+                android:id="@+id/et_bank_num"
+                android:inputType="number"
+                android:paddingStart="20dp"
+                android:background="@drawable/selector_edit_text_enable"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                style="@style/text_14sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="开户银行"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:hint="点击选择银行"
+                android:id="@+id/tv_bank"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/colorHint"
+                android:paddingStart="20dp"
+                android:drawableEnd="@mipmap/ic_triangle"
+                android:paddingEnd="15dp"
+                android:drawablePadding="8dp"
+                android:layout_height="match_parent"
+                style="@style/text_14sp_black"
+                android:background="@drawable/selector_edit_text_enable"/>
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:paddingStart="20dp"-->
+            <!--android:paddingEnd="20dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp">-->
+
+            <!--<TextView-->
+                <!--style="@style/text_14sp_black"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="开户地区"-->
+                <!--android:gravity="center_vertical"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="3"-->
+                <!--android:hint="点击选择省市"-->
+                <!--android:id="@+id/tv_province"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColorHint="@color/colorHint"-->
+                <!--android:paddingStart="20dp"-->
+                <!--android:drawableEnd="@mipmap/ic_triangle"-->
+                <!--android:paddingEnd="15dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--style="@style/text_14sp_black"-->
+                <!--android:background="@drawable/selector_edit_text_enable"/>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                style="@style/text_14sp_black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="银行手机号"
+                android:gravity="center_vertical"/>
+
+            <com.changju.fanlitou.ui.EditTextWithDel
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:id="@+id/tv_phone"
+                android:layout_height="55dp"
+                style="@style/text_14sp_black"
+                android:hint="请输入手机号码"
+                android:paddingEnd="6dp"
+                android:maxLength="11"
+                android:inputType="number"
+                android:textColorHint="@color/colorHint"
+                android:paddingStart="20dp"
+                android:background="@drawable/selector_edit_text"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:id="@+id/btn_ok"
+            android:textColor="@android:color/white"
+            android:background="@drawable/shape_round_rectangle_red_soild"
+            android:layout_marginTop="-5dp"/>
+    </LinearLayout>
+
+    <include layout="@layout/fragment_lazy_loading"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:visibility="gone"
+             android:id="@+id/include_loading"/>
+
+    <include layout="@layout/view_load_error"
+             android:visibility="gone"
+             android:id="@+id/include_load_error"/>
+
+</FrameLayout>

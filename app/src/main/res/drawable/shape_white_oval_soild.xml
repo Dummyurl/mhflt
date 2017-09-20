@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <corners android:bottomLeftRadius="@dimen/crowd_funding_oval_radius"
+             android:radius="@dimen/crowd_funding_oval_radius"
+             android:bottomRightRadius="@dimen/crowd_funding_oval_radius"
+             android:topLeftRadius="@dimen/crowd_funding_oval_radius"
+             android:topRightRadius="@dimen/crowd_funding_oval_radius"/>
+    <solid android:color="@android:color/white"/>
+</shape>

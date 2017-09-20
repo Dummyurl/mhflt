@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <meta charset="UTF-8">
+    <script>
+
+        function show_share_btn(){
+            window.control.show_share_btn("http://m.test2.fanlitou.com",
+            "A test share" , "this is a test description" ,
+             "https://www.fanlitou.com/static/images/rebate/m_rebate_page1.png");
+        }
+
+        function show_native_dialog(){
+            var title = document.getElementById("title").value;
+            var content = document.getElementById("content").value;
+            window.control.showNativeDialog(title, content);
+        }
+
+        function is_login() {
+            window.control.start_to_activity("com.changju.fanlitou.activity.mine.InvestRecordActivity",["intent_boolean_lazyLoad","1"]);
+        }
+
+        function to_login_page(){
+            window.control.to_login_page();
+        }
+
+    </script>
+
+    <style type="text/css">
+    body{
+        font-size: 55px;
+        margin:auto;
+        width:auto;
+    }
+
+    #bt1,#bt2,#bt3,#title,#content{
+        width: auto;
+        font-size: 55px;
+        height: auto;
+        margin:0 auto 20px;
+        display: block;
+    }
+
+    </style>
+</head>
+
+<body>
+弹窗标题:<input type="text" name="title" id="title">
+弹窗内容:<input type="text" name="content" id="content">
+<input type="button" onclick="show_native_dialog()" id="bt1" value="显示客户端弹窗"><br>
+<input type="button" onclick="is_login()" id="bt2" value="跳转到投资记录">
+<input type="button" onclick="to_login_page()" id="bt3" value="跳转到登录页">
+<a href="http://m.test2.fanlitou.com">返利投</a>
+
+<!--<section class="spark-product-details">-->
+<!--<div class="spark-product-title"><div class="spark-pro-t">产品详情</div></div>-->
+<!--<div class="spark-product-cont ng-binding">-->
+<!--<table>-->
+<!--<tbody><tr>-->
+<!--<td>众筹金额</td>-->
+<!--<td>320000 元</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>预计售价</td>-->
+<!--<td>430000 元</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>起投金额</td>-->
+<!--<td>1000 元</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>最大限额</td>-->
+<!--<td>320000 元</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>众筹时间</td>-->
+<!--<td>起：2017-08-02 12:00:00&nbsp;&nbsp;&nbsp;止：2017-08-09 23:59:59</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>车辆类型</td>-->
+<!--<td>SUV</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>车辆品牌</td>-->
+<!--<td>丰田</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>新车售价</td>-->
+<!--<td>530000 元</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>车型</td>-->
+<!--<td>普拉多</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>行驶里程</td>-->
+<!--<td>67000</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td class="name">颜色</td>-->
+<!--<td class="val">白</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>注册时间</td>-->
+<!--<td>2014-01-14</td>-->
+<!--</tr>-->
+<!--</tbody></table>-->
+<!--</div>-->
+<!--</section>-->
+
+
+</body>
+</html>

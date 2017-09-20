@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_btn_pressed"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp">
+
+            <TextView
+                android:id="@+id/year_gr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="--"
+                android:textColor="@color/colorTextRed"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/year_gr"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/year_gr"
+                android:text=" %"
+                android:textColor="@color/colorTextRed"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/now_gold_price_text"
+            style="@style/text_12sp_gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="14dp"
+            android:text="年涨幅" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/fund_name"
+            style="@style/text_14sp_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="----------" />
+
+        <TextView
+            android:id="@+id/risk_invest_type"
+            style="@style/text_12sp_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="--------" />
+
+    </LinearLayout>
+</LinearLayout>

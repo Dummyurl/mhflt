@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:clickable="true"
+    android:id="@+id/root_view"
+    android:background="@drawable/selector_btn_pressed">
+
+    <TextView
+        android:id="@+id/order_number"
+        android:text="1"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorTextOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/order_number"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="2dp"
+        android:text="2011-11-11"
+        style="@style/text_12sp_gray2"/>
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/t5"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:text="多彩投的标"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/tv_time"
+        android:layout_alignStart="@+id/tv_time"
+        style="@style/text_12sp_gray"/>
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tv_time"
+        android:text="200"
+        android:textColor="@color/progress_red"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        style="@style/text_12sp_gray2"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_toLeftOf="@id/t2"
+        android:layout_alignBottom="@id/tv_time"
+        android:text="返利"
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/t1"
+        android:text="200,00"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        style="@style/text_12sp_gray"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_toLeftOf="@id/t4"
+        android:layout_alignBottom="@id/t1"
+        android:text="投资"
+        style="@style/text_12sp_gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/arrow_right"
+        android:id="@+id/arrow_right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"/>
+
+    <View
+        style="@style/bg_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>

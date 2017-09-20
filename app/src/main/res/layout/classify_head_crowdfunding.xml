@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_classify_crowdfunding_banner"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="134dp" />
+
+    <RelativeLayout
+        android:paddingLeft="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/t1"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多元配置"
+            style="@style/text_14sp_black"/>
+        <TextView
+            android:id="@+id/t2"
+            android:layout_toRightOf="@id/t1"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="让理财营养健康"
+            android:layout_marginLeft="12dp"
+            style="@style/text_14sp_black"/>
+        <TextView
+            android:id="@+id/tv_crowdfunding_platform_name"
+            android:layout_below="@id/t1"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_gray"/>
+        <TextView
+            android:id="@+id/tv_crowdfunding_platform_description"
+            android:layout_toRightOf="@id/tv_crowdfunding_platform_name"
+            android:layout_below="@id/t2"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            style="@style/text_12sp_gray"/>
+
+        <ImageView
+            android:id="@+id/iv_crowdfunding_platform_logo"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/aaa_crowdfund_banner"
+            android:layout_marginRight="14dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

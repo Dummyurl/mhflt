@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:id="@+id/fragment_container"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:src="@mipmap/ic_left_black"
+                android:paddingTop="20dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_pressed"
+                android:id="@+id/iv_back_register" />
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/have_account_go_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                style="@style/text_14sp_gray"
+                android:text="已有账号？去登录" />
+            <ImageView
+                android:id="@+id/tv_title_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/logo_large"
+                android:layout_below="@+id/have_account_go_load"
+                android:layout_centerHorizontal="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layout_line_1_register"
+                android:layout_marginTop="49dp"
+                android:layout_below="@+id/tv_title_login"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="0dp"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:text="手机号"/>
+                <com.changju.fanlitou.ui.EditTextWithDel
+                    style="@style/EditTextStyle"
+                    android:id="@+id/register_phone_number"
+                    android:inputType="phone"
+                    android:hint="11位手机号"
+                    android:maxLength="11" />
+                <TextView
+                    android:id="@+id/get_id_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@drawable/selector_btn_text_color"
+                    android:background="@drawable/selector_btn_bg" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_1"
+                style="@style/bg_line"
+                android:layout_below="@+id/layout_line_1_register"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layout_line_2_register"
+                android:layout_below="@+id/line_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:text="验证码"
+                    android:id="@+id/tv_line_1_login"/>
+                <com.changju.fanlitou.ui.EditTextWithDel
+                    style="@style/EditTextStyle"
+                    android:hint="6位短信验证码"
+                    android:id="@+id/et_msg_code_register"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_2"
+                style="@style/bg_line"
+                android:layout_below="@+id/layout_line_2_register"/>
+
+            <LinearLayout
+                android:id="@+id/layout_line_3_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/line_2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:paddingTop="12dp"
+                    android:paddingBottom="11dp"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:text="密码"
+                    android:id="@+id/tv_line_2_login"/>
+                <com.changju.fanlitou.ui.EditTextWithDel
+                    style="@style/EditTextStyle"
+                    android:id="@+id/et_pwd_register"
+                    android:hint="6-12位密码"
+                    android:maxLength="12"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_3"
+                style="@style/bg_line"
+                android:layout_below="@+id/layout_line_3_register"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_line_4_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_3">
+                <LinearLayout
+                    android:id="@+id/layout_invent_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="4dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:paddingTop="13dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorTextSecondary"
+                        android:text="邀请码"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_line_3_login"/>
+                    <com.changju.fanlitou.ui.EditTextWithDel
+                        android:paddingTop="13dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/et_invent_register"
+                        android:hint="可不填"
+                        style="@style/EditTextStyle"
+                        android:inputType="number"
+                        android:maxLength="11"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line_4"
+                    style="@style/bg_line"
+                    android:layout_below="@+id/layout_invent_register" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/do_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:layout_below="@+id/layout_line_4_register"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="完成注册"
+                android:enabled="false"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/selector_btn_update"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_fund_holding_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_tag_gray"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/my_fund_holding_tv_fund_name"
+        style="@style/text_12sp_gray"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_fund_holding_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="9000.00"
+                style="@style/text_14sp_gray" />
+
+            <TextView
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_fund_holding_money"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:text="金额(元)" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_fund_holding_yesterday_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/text_14sp_gray" />
+
+            <TextView
+                android:id="@+id/my_fund_holding_yesterday"
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_fund_holding_yesterday_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:text="昨日收益(元)" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_fund_holding_total_rebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/text_14sp_gray" />
+
+            <TextView
+                style="@style/text_12sp_gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_fund_holding_total_rebate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:text="累计收益(元)" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/bg_line"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/my_fund_holding_share"
+        style="@style/text_12sp_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        android:text="在持份额(份)：900.01" />
+
+
+</LinearLayout>

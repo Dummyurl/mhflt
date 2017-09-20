@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_drawable_open"
+              android:layout_width="270dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="end"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusGray"
+        android:fitsSystemWindows="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/platform_type"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <com.changju.fanlitou.ui.MyRadioGroup
+                android:id="@+id/platform_type_platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_0"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/unlimited"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_1"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/fixed"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_2"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/current"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_3"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/gold"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_4"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/crowd_funding"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_5"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/abroad"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_type_platform_6"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/insurance"/>
+                </LinearLayout>
+            </com.changju.fanlitou.ui.MyRadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/platform_fanlitou"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <com.changju.fanlitou.ui.MyRadioGroup
+                android:id="@+id/platform_fanlitou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/platform_fanlitou_0"
+                    style="@style/platformRadioStyle"
+                    android:text="@string/unlimited"/>
+
+                <RadioButton
+                    android:id="@+id/platform_fanlitou_1"
+                    style="@style/platformRadioStyle"
+                    android:text="@string/auto_register"/>
+
+                <RadioButton
+                    android:id="@+id/platform_fanlitou_2"
+                    style="@style/platformRadioStyle"
+                    android:text="@string/fanlitou_activity"/>
+
+            </com.changju.fanlitou.ui.MyRadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/platform_activity"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <com.changju.fanlitou.ui.MyRadioGroup
+                android:id="@+id/platform_activity_platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_activity_platform_0"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/unlimited"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_activity_platform_1"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/new_regist"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_activity_platform_2"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/invest_price"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_activity_platform_3"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/red_pockets"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_activity_platform_4"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/ext_tickets"/>
+                </LinearLayout>
+
+            </com.changju.fanlitou.ui.MyRadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/platform_background"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <com.changju.fanlitou.ui.MyRadioGroup
+                android:id="@+id/platform_background_platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_background_platform_0"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/unlimited"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_background_platform_1"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/public_platform"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_background_platform_2"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/vc_platform"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/platform_background_platform_3"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/country_platform"/>
+
+                    <RadioButton
+                        android:id="@+id/platform_background_platform_4"
+                        style="@style/platformRadioStyle"
+                        android:text="@string/private_platform"/>
+
+
+                </LinearLayout>
+
+            </com.changju.fanlitou.ui.MyRadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_clear_platform"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorTextOrange"
+            android:text="@string/btn_clear"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_ok_platform"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:background="@color/colorTextRed"
+            android:text="@string/btn_ok"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>

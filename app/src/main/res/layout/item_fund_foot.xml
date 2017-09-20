@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="@color/colorBackground"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_black"
+            android:text="基金档案"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_gray2"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:layout_marginRight="10dp"
+            android:text="基金概况、资产分布"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/fund_detail_arrow_new"
+            android:scaleType="fitXY"/>
+        <View
+            android:layout_below="@+id/tv_1"
+            style="@style/bg_line"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_black"
+            android:text="费率相关"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_gray2"
+            android:layout_toLeftOf="@+id/iv_arrow1"
+            android:layout_marginRight="10dp"
+            android:text="认购、申购、赎回费率"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/fund_detail_arrow_new"
+            android:scaleType="fitXY"/>
+        <View
+            android:layout_below="@+id/tv_3"
+            style="@style/bg_line"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_black"
+            android:text="基金经理"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/fund_detail_arrow_new"
+            android:scaleType="fitXY"/>
+        <View
+            android:layout_below="@+id/tv_5"
+            style="@style/bg_line"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_black"
+            android:text="历史分红"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow3"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/fund_detail_arrow_new"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:background="@color/colorBackground"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textColor="@color/colorTextThird"
+        android:text="基金销售服务由上海利得基金销售有限公司提供"/>
+
+    <View
+        style="@style/bg_line"/>
+</LinearLayout>

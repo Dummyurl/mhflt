@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_classify_fixed_banner"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/abroad_product_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="130dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_fixed_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="慧眼识大牌"
+                android:textColor="@color/chart_blue"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/logo_app_operation"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/background"
+                style="@style/text_10sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="15dp"
+                android:singleLine="true"
+                android:text="一句话简介" />
+        </RelativeLayout>
+
+        <View style="@style/bg_line_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rl_fixed_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_fixed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="收益亮瞎眼"
+                android:textColor="@color/chart_blue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_yearincome_fixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_fixed2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="年化收益"
+                android:textColor="@color/progress_red"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/bid_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_yearincome_fixed"
+                android:layout_marginBottom="-2dp"
+                android:layout_marginLeft="1.5dp"
+                android:layout_toRightOf="@id/tv_yearincome_fixed"
+                android:text="10"
+                android:textColor="@color/progress_red"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_yearincome_fixed"
+                android:layout_toRightOf="@id/bid_interest"
+                android:text="%"
+                android:textColor="@color/progress_red"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/platform_platform_logo_app_square"
+                android:layout_width="96dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/tv_yearincome_fixed"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/bid_name"
+                style="@style/text_10sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:text="一句话简介" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorBackground" />
+
+    <View style="@style/bg_line" />
+
+    <include
+        android:id="@+id/include_filter"
+        layout="@layout/include_fixed_filter"/>
+</LinearLayout>
+

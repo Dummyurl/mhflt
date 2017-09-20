@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:layout_marginStart="32dp"
+              android:layout_marginEnd="32dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/text_14sp_black"
+            android:id="@+id/tv_title"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/close_black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:id="@+id/iv_close"
+            android:background="@drawable/selector_btn_pressed"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View
+        style="@style/bg_line"/>
+    <TextView
+        android:paddingTop="22dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="25dp"
+        android:lineSpacingMultiplier="1.5"
+        android:gravity="center"
+        android:id="@+id/tv_content"
+        style="@style/text_12sp_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

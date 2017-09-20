@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingTop="15dp"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_12sp_gray2"
+        android:text="2017-06-14"
+        android:id="@+id/tv_date"/>
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_platform_logo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginTop="4dp"/>
+
+    <LinearLayout
+        android:layout_alignBottom="@+id/iv_platform_logo"
+        android:layout_toEndOf="@+id/iv_platform_logo"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_14sp_black"
+            android:id="@+id/tv_platform_name"
+            android:gravity="start"
+            android:text="爱钱帮" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_gray"
+            android:text="手动注册"
+            android:gravity="center"
+            android:id="@+id/tv_remark"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_12sp_gray"
+            android:text="享返利"
+            android:gravity="end"
+            android:id="@+id/tv_is_enjoy_bonus"/>
+    </LinearLayout>
+
+    <View
+        style="@style/bg_line"
+        android:layout_below="@+id/iv_platform_logo"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

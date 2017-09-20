@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+    <com.changju.fanlitou.ui.ImageTextButton
+        android:id="@+id/grid_image_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:background="@drawable/selector_btn_pressed"
+        android:layout_gravity="center"/>
+    <ImageView
+        android:id="@+id/iv_checked"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/ic_platform_selected"/>
+</FrameLayout>

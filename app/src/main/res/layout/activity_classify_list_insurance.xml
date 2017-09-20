@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorStatusGray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/iv_back_insurance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_btn_pressed"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_left_black" />
+
+        <TextView
+            android:id="@+id/abroad_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="保险"
+            android:textColor="@color/colorBidName"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/bg_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/insurance_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    app:elevation="0dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_classify_insurance_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="134dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp"
+                        app:layout_scrollFlags="scroll" />
+
+                    <LinearLayout
+                        android:id="@+id/invis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_title_bar_line"
+                        android:orientation="horizontal"
+                        android:paddingBottom="1dp">
+
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/ins_rv_t"
+                            android:layout_width="0dp"
+                            android:layout_height="49dp"
+                            android:layout_weight="1"
+                            app:tabBackground="@android:color/white"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMode="scrollable"
+                            app:tabSelectedTextColor="@color/colorTextOrange"
+                            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                            app:tabTextColor="@color/colorTextSecondary" />
+
+
+                        <ImageButton
+                            android:id="@+id/ins_ib"
+                            android:layout_width="60dp"
+                            android:layout_height="49dp"
+                            android:background="#fff"
+                            android:src="@mipmap/insurance_img_user" />
+                    </LinearLayout>
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/insurance_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include
+            android:id="@+id/include_loading"
+            layout="@layout/fragment_lazy_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/include_load_error"
+            layout="@layout/view_load_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

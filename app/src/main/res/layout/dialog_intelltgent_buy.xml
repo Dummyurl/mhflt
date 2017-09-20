@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    android:id="@+id/layout_root"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/layout_register"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_dialog"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="正在注册账号" />
+
+        <View
+            style="@style/bg_line"/>
+
+
+        <TextView
+            android:id="@+id/tv_register_content"
+            android:textSize="13sp"
+            android:layout_margin="17dp"
+            android:textColor="@color/colorTextPrimary"
+            android:lineSpacingMultiplier="1.3"
+            android:text="即日起，玉米理财注册、实名认证、充值、提现可在返利投直接进行，在返利投页面投资可获得返利，在玉米理财投资将不能得到返利。
+
+注册平台：账号、密码通过短信形式发送，且可用于登录玉米理财
+充值提现：在返利投和玉米理财均可进行操作（实际交易金额仍然在玉米理财）
+账户余额：平台余额变化返利投也将进行更新，可在账户管理中查看
+
+正在注册玉米理财，账号为130****0032"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/positiveButton"
+                android:textColor="@android:color/white"
+                android:layout_width="90dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/shape_round_rectangle_red_soild"
+                android:gravity="center"
+                android:text="确定开户" />
+
+            <Button
+                android:id="@+id/nativeButton"
+                android:textColor="#757575"
+                android:layout_width="90dp"
+                android:layout_height="34dp"
+                android:background="@drawable/shape_tag_gray"
+                android:gravity="center"
+                android:text="@string/btn_cancel" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如有疑问，请拨打客服400-601-8132"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_call_phone"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_old_user"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@mipmap/close_black"
+            android:id="@+id/iv_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:id="@+id/tv_title"
+            android:text="正在为您生成宜贷网账号"
+            android:textColor="@color/colorTextBlue"/>
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/iv_logo"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tv_content"
+            android:text="正在XXXXXXX"
+            android:lineSpacingExtra="10dp"
+            style="@style/text_12sp_black"
+            android:layout_below="@+id/iv_logo" />
+
+        <FrameLayout
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_button_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="正在加载中"
+                android:textColor="@android:color/white"
+                android:background="@color/colorTextBlue"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>

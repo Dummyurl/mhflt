@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="40dp"
+    android:layout_marginStart="40dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_14sp_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="登录存管银行充值" />
+
+    <View style="@style/bg_line" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_14sp_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingBottom="20dp"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:gravity="center"
+        android:text="请在新打开的网上银行页面进行充值，充值未完成之前请不要关闭该窗口" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_charge_ok"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_width="90dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/shape_tag_red_soild"
+            android:gravity="center"
+            android:text="充值完成" />
+
+        <TextView
+            android:id="@+id/btn_charge_problem"
+            android:layout_width="90dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/shape_tag_blue_soild"
+            android:gravity="center"
+            android:text="遇到问题"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>

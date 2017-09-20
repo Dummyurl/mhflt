@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:id="@+id/layout_root"
+              android:gravity="bottom"
+                android:background="@android:color/transparent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_one"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_one"
+                android:background="@drawable/shape_oval_white_soild"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_one"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="32dp"
+            android:gravity="center"
+            android:id="@+id/layout_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_two"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:background="@drawable/shape_oval_white_soild"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_two"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_gravity="center|bottom"
+        android:layout_width="60dp"
+        android:layout_height="54dp">
+        <ImageView
+            android:layout_gravity="top"
+            android:id="@+id/iv_close"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="center"
+            android:background="@drawable/shape_oval_red_soild"
+            android:src="@mipmap/ic_close_white"/>
+    </FrameLayout>
+
+</LinearLayout>

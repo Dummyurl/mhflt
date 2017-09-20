@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imageTextButton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root_mine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorStatusGray"
+        android:fitsSystemWindows="true" />
+
+    <FrameLayout
+        android:id="@+id/layout_not_login_mine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@android:color/white">
+
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="5"
+        android:background="@android:color/white"
+        android:divider="@drawable/table_v_divider"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/table_h_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle|beginning|end">
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_1"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/ic_fanlibao"
+                imageTextButton:text="返利宝" />
+
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_2"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img2"
+                imageTextButton:text="@string/invest_record" />
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_3"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img3"
+                imageTextButton:text="@string/money_details" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/table_h_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle|beginning|end">
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_4"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img1"
+                imageTextButton:text="@string/my_fund" />
+
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_5"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img5"
+                imageTextButton:text="@string/invitation_courtesy" />
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_6"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img6"
+                imageTextButton:text="@string/account_management" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/table_h_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle|beginning|end">
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_7"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img7"
+                imageTextButton:text="@string/presentation_record" />
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_8"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img8"
+                imageTextButton:text="@string/newbie_guide" />
+
+            <com.changju.fanlitou.ui.ImageTextButton
+                android:id="@+id/mine_9"
+                style="@style/ImageTextStyle"
+                android:layout_gravity="center"
+                imageTextButton:img="@mipmap/img4"
+                imageTextButton:text="@string/my_red_packet" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/tv_kfdh"
+            style="@style/text_12sp_gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="客服电话：400-601-8132" />
+    </FrameLayout>
+
+
+</LinearLayout>

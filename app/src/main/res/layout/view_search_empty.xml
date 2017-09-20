@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:text="没有符合条件的结果\n换个搜索词试试"
+    android:lineSpacingExtra="5dp"
+    android:paddingTop="20dp"
+    style="@style/text_12sp_gray"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</TextView>

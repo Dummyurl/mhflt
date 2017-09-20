@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_tag_gray"
+    android:layout_marginTop="14dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/platform_name"
+            style="@style/text_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网利宝" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/t2"
+            style="@style/text_13sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/platform_name"
+            android:text=" | " />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/bid_name"
+            style="@style/text_12sp_gray"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/t2"
+            android:text="黄金宝12345"/>
+
+        <LinearLayout
+            android:id="@+id/tag"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        style="@style/bg_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="90dp">
+            <LinearLayout
+                android:id="@+id/interest"
+                android:layout_marginTop="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bid_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.00"
+                    android:textColor="@color/colorTextRed"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/bonus_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/year_income"
+                    android:text="+2.0%"
+                    android:textColor="@color/colorTextRed"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/fanli"
+                android:src="@mipmap/fanli"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/interest"
+                android:layout_alignTop="@id/interest"
+                android:layout_marginLeft="-18dp"
+                android:layout_marginTop="-16dp"
+                />
+            <TextView
+                android:layout_below="@id/interest"
+                android:text="年化收益"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_12sp_gray2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="90dp">
+            <TextView
+                android:id="@+id/duration"
+                android:layout_marginTop="33dp"
+                android:text="3个月"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_16sp_gray"/>
+
+            <TextView
+                android:layout_below="@id/duration"
+                android:text="投资期限"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_12sp_gray2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="90dp">
+            <com.changju.fanlitou.ui.RoundProgressBar
+                android:id="@+id/roundProgressBar"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="26dp"
+                android_custom:roundColor="@color/colorProgressBackground2"
+                android_custom:roundProgressColor="@color/progress_red"
+                android_custom:roundWidth="2dp"
+                android_custom:textColor="@color/progress_red"
+                android_custom:textSize="14sp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/bg_line"/>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_14sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_new_user"
+            android:gravity="center"
+            android:text="新手标" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_income"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_income"
+                style="@style/text_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="收益" />
+
+            <ImageView
+                android:id="@+id/iv_income"
+                android:layout_width="6dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_income"
+                android:src="@mipmap/order" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_duration"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_duration"
+                style="@style/text_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="期限" />
+
+            <ImageView
+                android:id="@+id/iv_duration"
+                android:layout_width="6dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_duration"
+                android:src="@mipmap/order" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_filter_discover"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical"
+            android:padding="12dp"
+            android:src="@mipmap/filter" />
+    </LinearLayout>
+
+    <View
+        style="@style/bg_line"/>
+
+    <com.changju.fanlitou.refreshview.XRefreshView
+        android:id="@+id/swipe_refresh_bid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view_bid"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+    </com.changju.fanlitou.refreshview.XRefreshView>
+
+</LinearLayout>

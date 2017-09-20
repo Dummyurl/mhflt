@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="106dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/shape_tag_gray">
+
+    <TextView
+        android:id="@+id/tv_money_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-07-29"
+        style="@style/text_12sp_gray"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_money_detail_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现成功"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="10dp"
+        style="@style/text_12sp_gray"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <View
+        android:layout_below="@+id/tv_money_detail_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view_line"
+        style="@style/bg_line"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_below="@+id/view_line"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:src="@mipmap/aaa_moneydetail"/>
+
+    <TextView
+        android:id="@+id/yue"
+        android:textSize="15sp"
+        android:text="+1111.11元"
+        android:textColor="@color/progress_red"
+        android:layout_toRightOf="@id/img"
+        android:layout_alignTop="@id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_balance"
+        android:text="(可用余额：12345元)"
+        android:layout_marginBottom="2dp"
+        style="@style/text_12sp_gray"
+        android:layout_toRightOf="@id/yue"
+        android:layout_marginLeft="4dp"
+        android:layout_alignBottom="@id/yue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提现单号：12345678"
+        android:gravity="bottom"
+        android:id="@+id/tv_desc"
+        android:singleLine="true"
+        android:layout_marginEnd="5dp"
+        style="@style/text_12sp_gray2"
+        android:layout_below="@id/yue"
+        android:layout_toEndOf="@+id/img"
+        android:layout_alignBottom="@id/img"/>
+
+</RelativeLayout>

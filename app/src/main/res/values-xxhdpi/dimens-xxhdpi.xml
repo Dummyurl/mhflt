@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="withdraw_bg_no_bank_height">156dp</dimen>
+    <dimen name="loading_width">64dp</dimen>
+    <dimen name="banner_height">166dp</dimen>
+    <dimen name="agreement_height">500dp</dimen>
+    <dimen name="main_activity_width">280dp</dimen>
+    <dimen name="main_activity_height">240dp</dimen>
+</resources>
